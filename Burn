@@ -1,0 +1,11 @@
+// The amount of this token you want to burn
+const amount = 1.2;
+
+await contract.erc20.burn(amount);
+// Address of the wallet sending the tokens
+const holderAddress = "0xD379600BBdEb679fed52F8FA873a57aA858c0d96";
+
+// The amount of this token you want to burn
+const amount = 1.2;
+
+await contract.erc20.burnFrom(holderAddress, amount);
