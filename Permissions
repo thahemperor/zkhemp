@@ -1,0 +1,8 @@
+await contract.roles.grant("minter", "0xD379600BBdEb679fed52F8FA873a57aA858c0d96");
+await contract.roles.revoke("minter", "0xD379600BBdEb679fed52F8FA873a57aA858c0d96");
+const minterAddresses = await contract.roles.get("minter");
+await contract.roles.setAll({
+ minter: []
+});
+console.log(await contract.roles.get("minter")); // No matter what members had the role before, the new list will be set to []
+const minterAddresses = await contract.roles.get("minter");
