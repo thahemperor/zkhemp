@@ -1,0 +1,31 @@
+// Address of the wallet to allow transfers from
+const spenderAddress = "0x...";
+// The number of tokens to give as allowance
+const amount = 100
+await contract.erc20.setAllowance(spenderAddress, amount);
+// Address of the wallet you want to send the tokens to
+const toAddress = "0x...";
+// The amount of tokens you want to send
+const amount = 0.1;
+await contract.erc20.transfer(toAddress, amount);
+// Address of the wallet sending the tokens
+const fromAddress = "0xD379600BBdEb679fed52F8FA873a57aA858c0d96";
+// Address of the wallet you want to send the tokens to
+const toAddress = "0x...";
+// The number of tokens you want to send
+const amount = 1.2
+// Note that the connected wallet must have approval to transfer the tokens of the fromAddress
+await contract.erc20.transferFrom(fromAddress, toAddress, amount);
+// Address of the wallet to check token allowance
+const spenderAddress = "0x...";
+const allowance = await contract.erc20.allowance(spenderAddress);
+// Address of the wallet who owns the funds
+const owner = "0xD379600BBdEb679fed52F8FA873a57aA858c0d96";
+// Address of the wallet to check token allowance
+const spender = "0x...";
+const allowance = await contract.erc20.allowanceOf(owner, spender);
+const balance = await contract.erc20.balance();
+const walletAddress = "0xD379600BBdEb679fed52F8FA873a57aA858c0d96";
+const balance = await contract.erc20.balanceOf(walletAddress);
+const token = await contract.erc20.get();
+const balance = await contract.erc20.totalSupply();
