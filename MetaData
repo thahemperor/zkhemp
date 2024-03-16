@@ -1,0 +1,9 @@
+await contract.metadata.set({
+  name: "My Contract",
+  description: "My contract description"
+})
+await contract.metadata.update({
+  description: "My new contract description"
+})"
+const metadata = await contract.metadata.get();
+console.log(metadata);
