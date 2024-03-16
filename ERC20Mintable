@@ -1,0 +1,5 @@
+const amount = "1.5"; // The amount of this token you want to mint
+await contract.erc20.mint(amount);
+const toAddress = "0xD379600BBdEb679fed52F8FA873a57aA858c0d96"; // Address of the wallet you want to mint the tokens to
+const amount = "1.5"; // The amount of this token you want to mint
+await contract.erc20.mintTo(toAddress, amount);
